@@ -38,7 +38,7 @@ instagram_username: kikeclerici
 # New fields not defaulted by jekyll-new with the minima theme
 # Add a copyright. A copyright symbol and year will be added automatically.
 # copyright: Company name, Inc.
-copyright: "Clerici Inc"
+copyright: "Clerici"
 
 # Build settings
 # Removed minima theme as it is now a regular theme
