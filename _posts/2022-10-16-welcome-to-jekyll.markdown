@@ -15,7 +15,9 @@ Or solo and big:
 
 I can also use code snippets:
 
-`Example in ruby, will make everything after in Java more likely`
+`(Example in ruby, will make everything after in Java more likely)`
+
+# Code Snippet:
 
 {% highlight ruby %}
 def print_hi(name)
@@ -25,14 +27,20 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-This is done with `"{% highlight ruby %}"` and `"{% endhighlight %}"` beginning/end.
-
-Check out the [Jekyll docs][jekyll-docs].
-This is here only so you can get an idea on how I used jekyll to build this blog.
+This is done with {% highlight ruby %} 
+{% highlight ruby %} 
+{% endhighlight %}
+{% endhighlight %} 
+beginning/end.
 
 To test links, I will flex my [Twitch channel][twitch-channel].
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
+`Link text used: [Twitch channel][twitch-channel]`
+`On another line: [twitch-channel]: https://twitch.tv/clerici`
+
+Get an idea on how I used jekyll to build this blog: [Jekyll docs][jekyll-docs].
+
 [twitch-channel]: https://twitch.tv/clerici
+[jekyll-docs]: https://jekyllrb.com/docs/home
 
 # That's it for today, keep learning with me!
