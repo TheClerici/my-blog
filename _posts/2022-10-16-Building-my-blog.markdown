@@ -4,6 +4,14 @@ title:  "Building my blog!"
 date:   2022-10-16 20:18:25 -0700
 categories: update
 ---
+Welcome to my blog Journey!
+
+`Single # to make it bigger`
+
+# Welcome to my blog Journey!
+
+`Double # to make it even bigger`
+
 ## Welcome to my blog Journey!
 
 Here I will basicaly `show` how to make it prettier. 
@@ -27,9 +35,9 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-# This is done with: {% highlight ruby %} 
+# This is done with: % highlight ruby % w/{}
 
-# And: {% endhighlight %} at the beginning/end.
+# And: % endhighlight % w/{} at the beginning/end.
 
 To test links, I will flex my [Twitch channel][twitch-channel].
 
