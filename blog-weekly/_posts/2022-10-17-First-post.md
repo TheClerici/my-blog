@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "First post"
+title:  "First weekly post"
 date:   2022-10-17 13:38:25 -0700
-categories: weekly
+category: Weekly
 ---
-Welcome to my first post
+Welcome to my First weekly post
 
 ## I will write things here
 1. one
