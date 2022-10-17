@@ -29,6 +29,17 @@ url: "https://theclerici.github.io" # the base hostname & protocol for your site
 twitter_username: kikeclerici
 github_username:  TheClerici
 
+# Fields minima uses, but are not defaulted with the jekyll new command.
+# Author is the default for posts, atom feed and is used in the footer.
+author: Enrique Clerici
+linkedin_username: enriqueclerici
+instagram_username: kikeclerici
+
+# New fields not defaulted by jekyll-new with the minima theme
+# Add a copyright. A copyright symbol and year will be added automatically.
+# copyright: Company name, Inc.
+copyright: "Clerici Inc"
+
 # Build settings
 # Removed minima theme as it is now a regular theme
 # theme: minima
