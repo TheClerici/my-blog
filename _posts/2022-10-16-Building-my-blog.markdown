@@ -27,9 +27,9 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-This is done with: {% highlight ruby %} 
+# This is done with: {% highlight ruby %} 
 
-And: {% endhighlight %} at the beginning/end.
+# And: {% endhighlight %} at the beginning/end.
 
 To test links, I will flex my [Twitch channel][twitch-channel].
 
