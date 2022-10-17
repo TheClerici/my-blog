@@ -2,9 +2,9 @@
 layout: post
 title:  "Building my blog!"
 date:   2022-10-16 20:18:25 -0700
-categories: jekyll update
+categories: update
 ---
-# Welcome to my blog Journey!
+## Welcome to my blog Journey!
 
 Here I will basicaly `show` how to make it prettier. 
 Like `this` by only using ` before and after a word.
@@ -27,15 +27,14 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-This is done with {% highlight ruby %} 
-{% highlight ruby %} 
-{% endhighlight %}
-{% endhighlight %} 
-beginning/end.
+This is done with: {% highlight ruby %} 
+
+And: {% endhighlight %} at the beginning/end.
 
 To test links, I will flex my [Twitch channel][twitch-channel].
 
 `Link text used: [Twitch channel][twitch-channel]`
+
 `On another line: [twitch-channel]: https://twitch.tv/clerici`
 
 Get an idea on how I used jekyll to build this blog: [Jekyll docs][jekyll-docs].
