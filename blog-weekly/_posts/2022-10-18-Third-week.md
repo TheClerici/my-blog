@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Third weekly post"
+title:  "Third weekly post!"
 date:   2022-10-18 12:00:25 -0700
 category: Weekly
 ---

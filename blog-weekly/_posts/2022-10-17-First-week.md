@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "First weekly post"
+title:  "First weekly post!"
 date:   2022-10-17 13:38:25 -0700
 category: Weekly
 ---
