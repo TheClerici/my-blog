@@ -17,9 +17,13 @@ Welcome to my blog Journey!
 Here I will basicaly `show` how to make it prettier. 
 Like `this` by only using ` before and after a word.
 
-Or solo and big:
+Or solo:
 
 `HELLO WORLD!`
+
+1. I can
+2. use numbers
+3. like this
 
 I can also use code snippets:
 

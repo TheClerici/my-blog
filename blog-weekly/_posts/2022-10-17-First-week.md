@@ -8,5 +8,5 @@ Welcome to my First weekly post
 
 ## I will write things here
 1. one
-2. that
+2. two
 3. last 
