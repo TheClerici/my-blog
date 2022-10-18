@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Third weekly post!"
+title:  "Third weekly post"
 date:   2022-10-18 12:00:25 -0700
 category: Weekly
 ---
-## Welcome to my Third weekly post
+## Welcome to my Third weekly post!
 
 First week that we have to work as a team, it was easier than I expected, as it seemed that the team
 started everyone by themselves at the beginning, we just needed to reunite and after that everything 
