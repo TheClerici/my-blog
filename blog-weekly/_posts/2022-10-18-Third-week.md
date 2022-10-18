@@ -1,18 +1,20 @@
 ---
 layout: post
-title:  "Second weekly post"
+title:  "Third weekly post"
 date:   2022-10-18 12:00:25 -0700
 category: Weekly
 ---
 ## Welcome to my Third weekly post
 
-First week that we have to work as a team, it was easier than I expected, as it seemed that the team started everyone by themselves at the beginning, 
-we just needed to reunite and after that everything started to flow. It was so nice how everyone was comfortable making the proposals and voting on 
-what can be the best, really hope that we can finish, it looks like we will. 
+First week that we have to work as a team, it was easier than I expected, as it seemed that the team
+started everyone by themselves at the beginning, we just needed to reunite and after that everything 
+started to flow. It was so nice how everyone was comfortable making the proposals and voting on what 
+can be the best, really hope that we can finish, it looks like we will. 
 
-As an individual, I focused on understanding all the problems, had some problems with the final two, in the meeting we discussed all of them and 
-how they work, so after that I was able to understand them, it was just the technical part, which I need to work on next week, as I still 
-find difficult to plasm all my ideas on the coding part, I know how to solve it, just not how to program it. 
+As an individual, I focused on understanding all the problems, had some problems with the final two, 
+in the meeting we discussed all of them and how they work, so after that I was able to understand them, 
+it was just the technical part, which I need to work on next week, as I still find difficult to plasm 
+all my ideas on the coding part, I know how to solve it, just not how to program it. 
 
 Started with understanding dynamic programming, how it can be done by memoization or tabulating, but not really problem solving, for sure focusing 
 on that, not only theory as practice makes perfect. I felt progression on my data structure but still I want to continue on it next week, 
