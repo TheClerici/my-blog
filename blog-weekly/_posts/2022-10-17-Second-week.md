@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Second weekly post"
+title:  "2nd weekly post"
 date:   2022-10-17 16:22:25 -0700
 category: Weekly
 ---
-## Welcome to my Second weekly post!
+## Welcome to my 2nd weekly post!
 
 I’m starting to feel more confident around the team, guess everyone is as you can notice while we hang, really excited of what is heading 
 next and what we can accomplish together.  
