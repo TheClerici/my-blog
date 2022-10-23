@@ -4,9 +4,9 @@ title:  "1st Technical Log"
 date:   2022-10-23 10:18:25 -0700
 category: Log
 ---
-# Double or One Thing
+## Double or One Thing
 
-`Overview and context`
+# `Overview`
 
 Double or One Thing is a problem that deals with String manipulation, where depending on the word that you get, you need to output the one that appears first in alphabetical order. In this case, I decided to give it an approach in Kotlin language, as I challenged myself to continue working with Kotlin on the individual problem to continue practicing it.
 
@@ -21,17 +21,21 @@ For example, these strings are in alphabetical order:
 5. HOME
 6. JAM
 
-[Double or One Thing][cj-dor1] problem context:
+# `Context`
+
+[Double or One Thing][cj-dor1] problem challenge:
 
 You are given a string of uppercase English letters. You can highlight any number of the letters (possibly all or none of them). The highlighted letters do not need to be consecutive. Then, a new string is produced by processing the letters from left to right: non-highlighted letters are appended once to the new string, while highlighted letters are appended twice. Similarly, if you highlight nothing, you obtain HELLOWORLD, and if you highlight all of the letters, you obtain HHEELLLLOOWWOORRLLDD. Notice how each occurrence of the same letter can be highlighted independently.
 
 Given a string, there are multiple strings that can be obtained as a result of this process, depending on the highlighting choices. Among all of those strings, output the one that appears first in alphabetical (also known as lexicographical) order.
 
-For more info, feel free to follow the hyperlink on `Double or One Thing`
+For more info, feel free to follow the hyperlink on `Double or One Thing`.
 
+# `Solution`
 
+The first challenge was to understand how CodeJam was giving the inputs, as they test your answer with 100 cases, in this case, they start giving you the 100 cases so you then test them and output in the order that they gave.
 
-# Code Snippet:
+For this, I worked on the `main` function of the program where I first read the total number of cases, depending on that, I created a mutable List to fill with all the cases with a for loop. On the last part, I need to print the cases in order, so I made another for loop to iterate through all the cases and called a function named doubleOrOne to work on the answer for the case in moment.
 
 {% highlight kotlin %}
 fun main(args: Array<String>) {
@@ -52,7 +56,11 @@ fun main(args: Array<String>) {
         doubleOrOne(casesArray[i]); 
     }
 }
+{% endhighlight %}
 
+
+
+{% highlight kotlin %}
 fun doubleOrOne(word: String) {
     //Making 2 arrays, one for the letter and one for the number of times each letter appears to double it later
     val letter: MutableList<String> = mutableListOf();
