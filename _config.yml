@@ -33,7 +33,7 @@ github_username:  TheClerici
 # Author is the default for posts, atom feed and is used in the footer.
 author: Enrique Clerici
 linkedin_username: enriqueclerici
-instagram_username: kikeclerici
+# instagram_username: kikeclerici
 
 # New fields not defaulted by jekyll-new with the minima theme
 # Add a copyright. A copyright symbol and year will be added automatically.
