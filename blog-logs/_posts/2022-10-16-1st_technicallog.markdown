@@ -6,7 +6,7 @@ category: Log
 ---
 ## Double or One Thing
 
-*`Overview`*
+`Overview`
 
 Double or One Thing is a problem that deals with String manipulation, where depending on the word that you get, you need to output the one that appears first in alphabetical order. In this case, I decided to give it an approach in Kotlin language, as I challenged myself to continue working with Kotlin on the individual problem to continue practicing it.
 
@@ -21,7 +21,7 @@ For example, these strings are in alphabetical order:
 5. HOME
 6. JAM
 
-*`Context`*
+`Context`
 
 [Double or One Thing][cj-dor1] problem challenge:
 
@@ -31,7 +31,7 @@ Given a string, there are multiple strings that can be obtained as a result of t
 
 For more info, feel free to follow the hyperlink on `Double or One Thing`.
 
-*`Solution`*
+`Solution`
 
 The first challenge was to understand how CodeJam was giving the inputs, as they test your answer with 100 cases, in this problem, they start giving you the 100 cases so you then test them and output in the order that they gave.
 
@@ -61,6 +61,25 @@ fun main(args: Array<String>) {
 {% endhighlight %}
 
 After, I needed to think in a way of solving the actual problem. Alphabetical order works in a way that if a letter is lower, you can repeat them. for this case I took 'A' as 1 and 'Z' as 26, just for a headsup, this is not the actual nomber on the ASCII table, but if you compare them you can think of them as the numbers I mentioned.
+
+I will use this word on all examples because it is on case #1: The word is PEEL and these are all the strings that can be obtained, in alphabetical order: PEEEEL, PEEEELL, PEEEL, PEEELL, PEEL, PEELL, PPEEEEL, PPEEEELL, PPEEEL, PPEEELL, PPEEL, and PPEELL.
+
+My first approach was to just compare the letter in i with the letter en i+1, and if it was lower to double it, this works but not completely, because you can have two equal letters together and it will not double because all those letters that are the same need to compare to the next bigger one in case there is one. In a case of just the same letter, it stays the same as a is lower than aa. You don't double the last letter if its repeated, you just put it the amount of times it is as in "jekyll", you only put "ll" at the end and not repeat it.
+
+How can I make it so it detects two letters? I came up with the idea of making 2 mutable lists one for the letter in position and other for the number of times each letter appears to double it later if needed. To add the number of times I made a counter that stored how many times the letter repeats, if its the same you sum 1 to it and if it's different you reset it to 1. 
+
+With this it worked, but I was encountering the problem of: "Out of bounds" as I checked i with i+1. To solve this I just put a character that is bigger on the ASCII list at the end of the word, it is bigger because we don't want the last letter to double, as it makes it bigger on alphabetical order. That is why there is another variable named firstWord = word.plus("·"). Then I just iterated through the word to add to the lists the letter and number of times it appears, in order.
+
+For you to understand better:
+
+1. (List) letter = [P, E, L]
+2. (List) count = [1, 2, 1]
+
+With this, I can create now the newWord that is gonna be first in order, so I created it and iterated in a for loop the size of my lists with letter and count, here I tested if it was lower and if it was, I multiplied the count by 2 so the letter needed repeats the amount of times in order for it to be first, if it was not lower, I just added the letter by the count. 
+
+Because I was testing with i+1 again the last letter was not going to appear, but as I explained earlier, this letter was only needed to test if the one before is lower, so you just add it at the end by the times it appears on count.
+
+With the answer in our newWord, we just print it and enjoy!
 
 _doubleOrOne function:_
 
@@ -105,5 +124,7 @@ fun doubleOrOne(word: String) {
     print("$newWord\n");
 }
 {% endhighlight %}
+
+`Extras`
 
 [cj-dor1]: https://codingcompetitions.withgoogle.com/codejam/round/0000000000877ba5/0000000000aa8e9c
