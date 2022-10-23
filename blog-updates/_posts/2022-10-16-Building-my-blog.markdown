@@ -14,7 +14,7 @@ Welcome to my blog Journey!
 
 ## Welcome to my blog Journey!
 
-Here I will basicaly `show` how to make it prettier. 
+Here I will `show` how to make it prettier. 
 Like `this` by only using ` before and after a word.
 
 Or solo:
