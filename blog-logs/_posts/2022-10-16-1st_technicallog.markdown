@@ -6,7 +6,7 @@ category: Log
 ---
 ## Double or One Thing
 
-`*Overview*`
+*`Overview`*
 
 Double or One Thing is a problem that deals with String manipulation, where depending on the word that you get, you need to output the one that appears first in alphabetical order. In this case, I decided to give it an approach in Kotlin language, as I challenged myself to continue working with Kotlin on the individual problem to continue practicing it.
 
@@ -21,7 +21,7 @@ For example, these strings are in alphabetical order:
 5. HOME
 6. JAM
 
-`*Context*`
+*`Context`*
 
 [Double or One Thing][cj-dor1] problem challenge:
 
@@ -31,7 +31,7 @@ Given a string, there are multiple strings that can be obtained as a result of t
 
 For more info, feel free to follow the hyperlink on `Double or One Thing`.
 
-`*Solution*`
+*`Solution`*
 
 The first challenge was to understand how CodeJam was giving the inputs, as they test your answer with 100 cases, in this problem, they start giving you the 100 cases so you then test them and output in the order that they gave.
 
