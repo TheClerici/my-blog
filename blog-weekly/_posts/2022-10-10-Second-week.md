@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2nd weekly post"
-date:   2022-10-17 16:22:25 -0700
+date:   2022-10-10 16:22:25 -0000
 category: Weekly
 ---
 ## Welcome to my 2nd weekly post!

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Building my blog!"
-date:   2022-10-16 20:18:25 -0700
+date:   2022-10-16 20:18:25 -0000
 category: Update
 ---
 Welcome to my blog Journey!

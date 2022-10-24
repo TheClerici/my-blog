@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Double or One Thing Full Code"
-date:   2022-10-23 20:18:25 -0700
+date:   2022-10-23 20:18:25 -0000
 category: Code
 ---
 
