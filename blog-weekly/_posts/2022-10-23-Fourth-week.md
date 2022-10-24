@@ -18,6 +18,8 @@ These challenges where hard, in the coding part and in the mathematical, because
 
 I also encountered myself with the problem of making my blog look better, as Github pages is new for me and I need to implement all of the knowledge I have been gaining, this is not hard to do but I certainly need to give it time and learn how to do it.
 
+I don't usually meditate, but one day I was just not able to get to the solution, and I tried the `Mindfulness 101` meditation and it relax me, later I was able to continue with what I wanted to achieve on that day. Found out that meditation is a good way to organize your ideas and to stop tunnel vision when faced.
+
 These past weeks have been moved, I'm really excited to see what is next on the line for us as apprentices, really certain that all the challenges that the team gives us are for the best and to push our limits, putting the work is always worth when you have the right approach. I learned a lot this week and I can't wait for the next ones.
 
 Teamwork was key to fulfill this week assignments, without each one of us this past two weeks would've been impossible, really thankful to learn and be able to focus on my strengths and help others when needed. At the end we are searching for a common goal and it shows when we all are putting to effort to get it. Let's keep growing together and learning together!
