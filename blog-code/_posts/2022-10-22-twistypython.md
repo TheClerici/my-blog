@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Twisty Little Passages Full Code [Python]"
-date:   2022-10-14 15:18:25 -0000
+date:   2022-10-22 15:18:25 -0000
 category: Code
 ---
 
