@@ -23,7 +23,7 @@
 title: Clerici's Developer Journey
 email: enrique_cle97@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my blog! Mechatronics Engineer, ex pro gamer.
+  Welcome to my blog! Mechatronics Engineer transitioning to software developer.
 baseurl: "/my-blog" # the subpath of your site, e.g. /blog
 url: "https://theclerici.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kikeclerici
