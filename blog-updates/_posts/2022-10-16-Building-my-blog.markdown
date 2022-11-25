@@ -6,11 +6,11 @@ category: Update
 ---
 Welcome to my blog Journey!
 
-`Single # to make it bigger`
+`Single # to make it h1`
 
 # Welcome to my blog Journey!
 
-`Double # to make it even bigger`
+`Double # to make it h2`
 
 ## Welcome to my blog Journey!
 
