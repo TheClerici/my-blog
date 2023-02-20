@@ -23,16 +23,16 @@ The main language is English, but we need to add translations for several other 
 The method for organizing the translations is to put them into directories named after the language code. The translated file still uses the original name (e.g. README.md)，just place it in the directory named after the language code.
 
 * localization
- * fr
-  * README.md
- * zh
-  * README.md
-  * abstract-document
-   * README.md
-  * abstract-factory
-   * README.md
-  * active-object
-   * README.md
+    * fr
+        * README.md
+    * zh
+        * README.md
+            * abstract-document
+        * README.md
+            * abstract-factory
+        * README.md
+            * active-object
+        * README.md
 
 Acceptance criteria:
 
