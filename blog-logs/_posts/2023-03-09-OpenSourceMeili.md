@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Translate the api-gateway readme to Spanish TechLog"
-date:   2023-02-20 12:18:25 -0000
+title:  "Create an enum to handle the Task Status TechLog"
+date:   2023-03-09 12:18:25 -0000
 category: Log
 ---
-## Translate the api-gateway readme to Spanish in Java Design Patterns.
+## Create an enum to handle Status in Task and TaskInfo in MeiliSearch, modify tests and methods where it's used.
 
 ------------------------------------------------------------------------------------------
 <blockquote> <p> Overview: </p> </blockquote> 
@@ -36,7 +36,7 @@ But the status could only be one of this value: `enqueued`, `processing`, `succe
 
 It could be great to create an enum to handle this.
 
-`NOTE:` As we progress with this pull request, methods and tests needed to be modified, so it is just not as simple as it looks! I will explain and show conversation screenshots in solution.
+`NOTE:` As we progress with this pull request, methods and tests needed to be modified, alallema also asked to implement it not only on TaskInfo but also in Task and change the way it worked, adding the enhancement label after... so it is just not as simple as it looks! I will explain and show conversation screenshots in solution.
 
 ------------------------------------------------------------------------------------------
 <blockquote> <p> Solution: </p> </blockquote> 
@@ -46,7 +46,7 @@ GitHub's code of conduct for open-source projects, which stipulates that everyon
 
 With this being adressed, I decided to start on the issue. 
 
-I have only worked with fresh projects where I can set the enum I want from the beginning, this being said, this project already had a String that worked as an enum which only had five possible options. As I was not certain about that I decided to go simple with what I know, and added a new package called ENUMS, where I had my new enum with all possible solutions, changed it on TaskInfo and modified some but not all tests. When submitting it, alallema left a comment with further explanation on what was needed. 
+I have only worked with fresh projects where I can set the enum I want from the beginning, this being said, this project already had a String that worked as an enum which only had five possible options. As I was not certain about that I decided to go simple with what I know, and added a new package called ENUMS, where I had my new enum with all possible words, changed it on TaskInfo and modified some but not all tests. When submitting it, alallema left a comment with further explanation on what was needed. 
 
 <p align="center">
     <img src="https://github.com/TheClerici/my-blog/blob/main/images/alallemaone.png?raw=true">
@@ -54,6 +54,70 @@ I have only worked with fresh projects where I can set the enum I want from the 
 <div align="center">
     <h5><strong>Fig 1. GitHub 1st feedback</strong></h5>
 </div>
+
+After getting my first feedback, I closed that pulled request and started again, as I felt like a needed a fresh start, this time, I was taking in consideration what I was told, and now needed to implement multiple things and have it in the order that they need.
+
+1. Started by creating the enum in the model directory.
+2. Instead of `TaskInfoStatus`, I called it `TaskStatus`, because it was now gonna be used on both _Task_ and _TaskInfo_.
+
+```java
+public enum TaskStatus {
+    ENQUEUED("enqueued"),
+    PROCESSING("processing"),
+    SUCCEEDED("succeeded"),
+    FAILED("failed"),
+    CANCELED("canceled");
+
+    public final String taskStatus;
+
+    TaskStatus(String taskStatus) {
+        this.taskStatus = taskStatus;
+    }
+
+    @Override
+    public String toString() {
+        return this.taskStatus;
+    }
+}
+```
+
+3. I exchanged the String on both and made them `TaskStatus`.
+
+```java
+public class Task {
+    //protected String status = "";
+    protected TaskStatus status = null;
+    //Other params
+}
+public class TaskInfo {
+    //protected String status = "";
+    protected TaskStatus status = null;
+    //Other params
+}
+```
+
+4. I learned how to build my project by following the [CONTRIBUTING][contributing] guidelines. 
+5. And finally, succesfully edited the unit tests that used _Task_ and _TaskInfo_ `TaskStatus`.
+
+After making all the changes, I had a question, but I needed to get some feedback to see if what I implemented was good, so I opened a draft pull request with the following question:
+
+<p align="center">
+    <img src="https://github.com/TheClerici/my-blog/blob/main/images/cleriq1.png?raw=true">
+</p>
+<div align="center">
+    <h5><strong>Fig 1. GitHub 1st question</strong></h5>
+</div>
+
+Where I got the following response:
+
+<p align="center">
+    <img src="https://github.com/TheClerici/my-blog/blob/main/images/alallematwo.png?raw=true">
+</p>
+<div align="center">
+    <h5><strong>Fig 1. GitHub 1st feedback</strong></h5>
+</div>
+
+CONTINUE HER--------E
 
 * Check that the issue is not yet in progress and has help wanted label
 * Comment on the issue that you are working on it so that others don't work on the same thing. The maintainers will then assign the issue for you.
@@ -73,3 +137,4 @@ With the solution added, I just followed the guide instructions explained above 
 
 [meili]: https://github.com/meilisearch
 [cj-dor]: https://github.com/meilisearch/meilisearch-java/issues/556
+[contributing]: https://github.com/meilisearch/meilisearch-java/blob/main/CONTRIBUTING.md
