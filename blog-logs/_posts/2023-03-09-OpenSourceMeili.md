@@ -57,8 +57,8 @@ I have only worked with fresh projects where I can set the enum I want from the 
 
 After getting my first feedback, I closed that pulled request and started again, as I felt like a needed a fresh start, this time, I was taking in consideration what I was told, and now needed to implement multiple things and have it in the order that they need.
 
-1. Started by creating the enum in the model directory.
-2. Instead of `TaskInfoStatus`, I called it `TaskStatus`, because it was now gonna be used on both _Task_ and _TaskInfo_.
+* Started by creating the enum in the model directory.
+* Instead of `TaskInfoStatus`, I called it `TaskStatus`, because it was now gonna be used on both _Task_ and _TaskInfo_.
 
 ```java
 public enum TaskStatus {
@@ -81,7 +81,7 @@ public enum TaskStatus {
 }
 ```
 
-3. I exchanged the String on both and made them `TaskStatus`.
+* I exchanged the String on both and made them `TaskStatus`.
 
 ```java
 public class Task {
@@ -96,8 +96,8 @@ public class TaskInfo {
 }
 ```
 
-4. I learned how to build my project by following the [CONTRIBUTING][contributing] guidelines. 
-5. And finally, succesfully edited the unit tests that used _Task_ and _TaskInfo_ `TaskStatus`.
+* I learned how to build my project by following the [CONTRIBUTING][contributing] guidelines. 
+* And finally, succesfully edited the unit tests that used _Task_ and _TaskInfo_ `TaskStatus`.
 
 After making all the changes, I had a question, but I needed to get some feedback to see if what I implemented was good, so I opened a draft pull request with the following question:
 
@@ -105,7 +105,7 @@ After making all the changes, I had a question, but I needed to get some feedbac
     <img src="https://github.com/TheClerici/my-blog/blob/main/images/cleriq1.png?raw=true">
 </p>
 <div align="center">
-    <h5><strong>Fig 1. GitHub 1st question</strong></h5>
+    <h5><strong>Fig 2. GitHub 1st question</strong></h5>
 </div>
 
 Where I got the following response:
@@ -114,26 +114,99 @@ Where I got the following response:
     <img src="https://github.com/TheClerici/my-blog/blob/main/images/alallematwo.png?raw=true">
 </p>
 <div align="center">
-    <h5><strong>Fig 1. GitHub 1st feedback</strong></h5>
+    <h5><strong>Fig 3. GitHub 2nd feedback</strong></h5>
 </div>
 
-CONTINUE HER--------E
+With this in consideration, I started to work on what ale told me, but I was not clear about on how to modify wait for task, so I asked for a little hint. 
 
-* Check that the issue is not yet in progress and has help wanted label
-* Comment on the issue that you are working on it so that others don't work on the same thing. The maintainers will then assign the issue for you.
-* Fork the repository.
-* Implement the code changes in your fork. Remember to add sufficient comments documenting the implementation. Reference the issue id e.g. #52 in your commit messages.
-* Create a pull request.
+<p align="center">
+    <img src="https://github.com/TheClerici/my-blog/blob/main/images/cleriq2.png?raw=true">
+</p>
+<div align="center">
+    <h5><strong>Fig 4. GitHub 2nd question</strong></h5>
+</div>
 
-For this, I worked on the `API-gateway` README.md dile located on the spanish translations of the program /localization/es/api-gateway where I solve the issue, my approach was the following:
+Where I got the following response:
 
-* Fork repo and clone it on my computer.
-* Added folder and README.md file.
-* Translate
-* Add, commit and push to my fork.
-* Pull request what I added.
+<p align="center">
+    <img src="https://github.com/TheClerici/my-blog/blob/main/images/alallema3.png?raw=true">
+</p>
+<div align="center">
+    <h5><strong>Fig 5. GitHub 3rd feedback</strong></h5>
+</div>
 
-With the solution added, I just followed the guide instructions explained above to fully contribute to the project, currently waiting for my pull request to be approved and merged and with that, I will succesfully contribute to my second open-source project!!
+With this information, I can continue and finish what I started.
+
+First, I modified the `testCreateDump()` on `ClientTest.java`, which was a matter or switching an assertion so the integration tests can build with what I implemented. This was achieved by changing:
+
+```java
+assertEquals(task.getStatus(), "enqueued");
+```
+
+To: 
+
+```java
+assertEquals(task.getStatus(), TaskStatus.ENQUEUED);
+```
+
+I also modified all of the tests that used the ENUM instead of just some of them, by doing it, all unit test where running succesfully.
+
+To end with, I finished with what was breaking the code, which I asked for a hint, TaskStatus was a String that was being created as `""`, so I switched that to TaskStatus and initiated it as a null. Then, I deleted two Strings that were impersonating an ENUM at the beginning of the class, as they were not gonna be used anymore because we now have TaskStatus. And finally, I followed the hint that ale gave me and implemented the new while that stops the code to break. 
+
+```java
+public class TasksHandler {
+    private final HttpClient httpClient;
+    /* public static final String SUCCEEDED = "succeeded";  #Removed
+    public static final String FAILED = "failed";           #Removed */
+
+    void waitForTask(int taskUid, int timeoutInMs, int intervalInMs) throws MeilisearchException {
+        Task task;
+        //String status = "";       #Removed
+        TaskStatus status = null; //#Added
+        long startTime = new Date().getTime();
+        long elapsedTime = 0;
+        
+        //New while
+        while (status == null
+                || (!status.equals(TaskStatus.SUCCEEDED) && !status.equals(TaskStatus.FAILED))) {
+                //...
+                }
+        }
+    }
+```
+
+Then, I started meilisearch on docker, ran unit, integration and linter tests to verify everything was working, then, following the contribution guide I commented that it was ready and ale told me it looked good!! Here is where ale realiced that it was an enhancement and added the label:
+
+<p align="center">
+    <img src="https://github.com/TheClerici/my-blog/blob/main/images/alallema4.png?raw=true">
+</p>
+<div align="center">
+    <h5><strong>Fig 4. Enhancement label</strong></h5>
+</div>
+
+------------------------------------------------------------------------------------------
+<blockquote> <p> How to contribute: </p> </blockquote> 
+
+1. Choose a Contribution
+    * The first step to contributing to MeiliSearch is to choose a contribution. This can be a new feature, a bug fix, documentation, or testing. MeiliSearch maintains a list of issues on GitHub that need attention, and this can be a good place to start.
+2. Fork the Repository
+    * After identifying the contribution, fork the MeiliSearch repository on GitHub. This creates a copy of the repository in your account, which you can use to make changes.
+3. Set Up a Local Environment
+    * Clone the forked repository to your local machine and set up a development environment. The MeiliSearch repository contains a Dockerfile and a docker-compose file, which can be used to set up a local environment quickly. Follow the instructions in the repository to set up the environment.
+4. Create a New Branch
+    * Create a new branch in the forked repository for the contribution. This helps to keep changes separate from the main codebase and makes it easier to manage changes. Name the branch appropriately, such as "new-feature" or "bug-fix".
+5. Make Changes and Test
+    * Make the necessary changes to the codebase and test them locally. MeiliSearch has a suite of tests that can be run locally to ensure that the changes do not break the codebase.
+6. Commit Changes
+    * After testing the changes, commit them to the branch with an appropriate commit message. The commit message should be descriptive and should explain the changes made.
+7.  Push Changes and Create a Pull Request
+    * Push the changes to the forked repository and create a pull request. The pull request should include a description of the changes made, any relevant documentation, and any other details that are necessary.
+8. Address Feedback
+    * The MeiliSearch team will review the pull request and provide feedback. Address the feedback and make any necessary changes.
+9. Merge the Pull Request
+    * Once the pull request has been approved, it can be merged into the main codebase. Congratulations, you have successfully contributed to MeiliSearch!
+
+With the solution added, I just followed the guide instructions explained above to fully contribute to the project, it is now merged and with that, I succesfully contributed to my third open-source project!! See you next time!
 
 [meili]: https://github.com/meilisearch
 [cj-dor]: https://github.com/meilisearch/meilisearch-java/issues/556
