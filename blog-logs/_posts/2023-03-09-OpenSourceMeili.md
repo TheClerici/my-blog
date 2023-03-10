@@ -151,7 +151,7 @@ assertEquals(task.getStatus(), TaskStatus.ENQUEUED);
 
 I also modified all of the tests that used the ENUM instead of just some of them, by doing it, all unit test where running succesfully.
 
-To end with, I finished with what was breaking the code, which I asked for a hint, TaskStatus was a String that was being created as `""`, so I switched that to TaskStatus and initiated it as a null. Then, I deleted two Strings that were impersonating an ENUM at the beginning of the class, as they were not gonna be used anymore because we now have TaskStatus. And finally, I followed the hint that ale gave me and implemented the new while that stops the code to break. 
+To end with, I finished with what was breaking the code, which I asked for a hint, TaskStatus was a String that was being created as `""`, so I switched that to TaskStatus and initiated it as a null. Then, I deleted two Strings that were impersonating an ENUM at the beginning of the class, as they were not gonna be used anymore because we now have TaskStatus. And finally, I followed the hint that ala gave me and implemented the new while that stops the code to break. 
 
 ```java
 public class TasksHandler {
@@ -175,10 +175,10 @@ public class TasksHandler {
     }
 ```
 
-Then, I started meilisearch on docker, ran unit, integration and linter tests to verify everything was working, then, following the contribution guide I commented that it was ready and ale told me it looked good!! Here is where ale realiced that it was an enhancement and added the label:
+Then, I started meilisearch on docker, ran unit, integration and linter tests to verify everything was working, then, following the contribution guide I commented that it was ready and ala told me it looked good!! Here is where ala realized that it was an enhancement and added the label:
 
 <p align="center">
-    <img src="https://github.com/TheClerici/my-blog/blob/main/images/alallema4.png?raw=true">
+    <img src="https://github.com/TheClerici/my-blog/blob/main/images/alellema4.png?raw=true">
 </p>
 <div align="center">
     <h5><strong>Fig 4. Enhancement label</strong></h5>
