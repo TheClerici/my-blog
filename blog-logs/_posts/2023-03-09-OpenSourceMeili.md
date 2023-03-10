@@ -181,7 +181,7 @@ Then, I started meilisearch on docker, ran unit, integration and linter tests to
     <img src="https://github.com/TheClerici/my-blog/blob/main/images/alellema4.png?raw=true">
 </p>
 <div align="center">
-    <h5><strong>Fig 4. Enhancement label</strong></h5>
+    <h5><strong>Fig 6. Enhancement label</strong></h5>
 </div>
 
 ------------------------------------------------------------------------------------------
